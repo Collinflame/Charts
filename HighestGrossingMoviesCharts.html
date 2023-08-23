@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highest Grossing Movies Charts</title>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Avatar', 'Avengers: Endgame', 'Avatar: The Way of Water', 'Titanic', 'Star Wars: The Force Awakens',
+                'Avengers: Infinity War', 'Spider-Man: No Way Home', 'Jurassic World', 'The Lion King', 'The Avengers', 'Furious 7',
+            'Top Gun: Maverick', 'Frozen II', 'Avengers: Age of Ultron', 'The Super Mario Bros. Movie', 'Black Panther',
+            'Harry Potter and the Deathly Hallows: Part 2', 'Star Wars: The Last Jedi', 'Jurassic World: Fallen Kingdom',
+            'Frozen', 'Barbie', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
+            'Captain America: Civil War', 'Aquaman', 'The Lord of the Rings: The Return of the King', 'Skyfall'],
+            datasets: [{
+                label: 'Box Office Gross',
+                data: [2923, 2799, 2320, 2264, 2071, 2052, 1921, 1671, 1663, 1520, 1515, 1495, 1453, 1405, 1358, 1349, 1342, 1334, 1310,
+                1284, 1282, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
+                backgroundColor: [
+                    'rgba(0, 255, 132, 0.2)',
+                    'rgba(255, 30, 30, 0.2)',
+                    'rgba(0, 0, 225, 0.2)',
+                    'rgba(255, 128, 0, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(0, 255, 0, 1)',
+                    'rgba(255, 30, 30, 1)',
+                    'rgba(0, 0, 255, 1)',
+                    'rgba(255, 128, 0, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                }
+            },
+            indexAxis: 'y'
+        }
+    });
+</script>
+</body>
+</html>
