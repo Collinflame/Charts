@@ -16,12 +16,12 @@
                 'Avengers: Infinity War', 'Spider-Man: No Way Home', 'Jurassic World', 'The Lion King', 'The Avengers', 'Furious 7',
             'Top Gun: Maverick', 'Frozen II', 'Avengers: Age of Ultron', 'The Super Mario Bros. Movie', 'Black Panther',
             'Harry Potter and the Deathly Hallows: Part 2', 'Star Wars: The Last Jedi', 'Jurassic World: Fallen Kingdom',
-            'Frozen', 'Barbie', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
+            'Barbie', 'Frozen', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
             'Captain America: Civil War', 'Aquaman', 'The Lord of the Rings: The Return of the King', 'Skyfall'],
             datasets: [{
                 label: 'Box Office Gross',
                 data: [2923, 2799, 2320, 2264, 2071, 2052, 1921, 1671, 1663, 1520, 1515, 1495, 1453, 1405, 1358, 1349, 1342, 1334, 1310,
-                1284, 1282, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
+                1286, 1284, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
                 backgroundColor: [
                     'rgba(0, 255, 132, 0.2)',
                     'rgba(255, 30, 30, 0.2)',
@@ -58,5 +58,108 @@
         }
     });
 </script>
+    <canvas id="myChart2"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart2');
+        var myChart2 = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Avatar', 'Avengers: Endgame', 'Avatar: The Way of Water', 'Titanic', 'Star Wars: The Force Awakens',
+                    'Avengers: Infinity War', 'Spider-Man: No Way Home', 'Jurassic World', 'The Lion King', 'The Avengers', 'Furious 7',
+                    'Top Gun: Maverick', 'Frozen II', 'Avengers: Age of Ultron', 'The Super Mario Bros. Movie', 'Black Panther',
+                    'Harry Potter and the Deathly Hallows: Part 2', 'Star Wars: The Last Jedi', 'Jurassic World: Fallen Kingdom',
+                    'Barbie', 'Frozen', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
+                    'Captain America: Civil War', 'Aquaman', 'The Lord of the Rings: The Return of the King', 'Skyfall'],
+                datasets: [{
+                    data: [2923, 2799, 2320, 2264, 2071, 2052, 1921, 1671, 1663, 1520, 1515, 1495, 1453, 1405, 1358, 1349, 1342, 1334, 1310,
+                        1286, 1284, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
+                    label: 'Gross By Millions',
+                    borderColor: 'rgba(120, 120, 255, 1)'
+                },
+                    {
+                        data: [2009, 2019, 2022, 1997, 2015, 2018, 2021, 2015, 2019, 2012, 2015, 2022, 2019, 2015, 2023, 2018,
+                        2011, 2017, 2018, 2023, 2013, 2017, 2018, 2017, 2013, 2015, 2016, 2018, 2003, 2012],
+                        label: 'Year',
+                        borderColor: 'rgba(255, 100, 255, 1)'
+                    }]
+            },
+            option: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Monthly Spending'
+                    },
+                    legend: {
+                        position: 'left'
+                    }
+                }
+            }
+        });
+
+    </script>
+    <div style='width: 900px'>
+    <canvas id="myChart3"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart3');
+        var myChart3 = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Avatar', 'Avengers: Endgame', 'Avatar: The Way of Water', 'Titanic', 'Star Wars: The Force Awakens',
+                    'Avengers: Infinity War', 'Spider-Man: No Way Home', 'Jurassic World', 'The Lion King', 'The Avengers', 'Furious 7',
+                    'Top Gun: Maverick', 'Frozen II', 'Avengers: Age of Ultron', 'The Super Mario Bros. Movie', 'Black Panther',
+                    'Harry Potter and the Deathly Hallows: Part 2', 'Star Wars: The Last Jedi', 'Jurassic World: Fallen Kingdom',
+                    'Barbie', 'Frozen', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
+                    'Captain America: Civil War', 'Aquaman', 'The Lord of the Rings: The Return of the King', 'Skyfall'],
+                datasets: [{
+                    label: 'Movie Titles',
+                    data: [2923, 2799, 2320, 2264, 2071, 2052, 1921, 1671, 1663, 1520, 1515, 1495, 1453, 1405, 1358, 1349, 1342, 1334, 1310,
+                        1286, 1284, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
+                    backgroundColor: [
+                        'rgba(13,50,175,0.37)',
+                        'rgb(148,27,37)',
+                        'rgb(136,227,201)',
+                        'rgba(222,96,0,0.79)',
+                        'rgb(238,205,38)',
+                        'rgb(48,211,16)'
+                    ],
+                    hoverOffset: 1
+                }]
+            }
+        });
+
+    </script>
+    <div style='width: 900px'>
+        <canvas id="myChart4"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart4');
+        var myChart4 = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Avatar', 'Avengers: Endgame', 'Avatar: The Way of Water', 'Titanic', 'Star Wars: The Force Awakens',
+                    'Avengers: Infinity War', 'Spider-Man: No Way Home', 'Jurassic World', 'The Lion King', 'The Avengers', 'Furious 7',
+                    'Top Gun: Maverick', 'Frozen II', 'Avengers: Age of Ultron', 'The Super Mario Bros. Movie', 'Black Panther',
+                    'Harry Potter and the Deathly Hallows: Part 2', 'Star Wars: The Last Jedi', 'Jurassic World: Fallen Kingdom',
+                    'Barbie', 'Frozen', 'Beauty and the Beast', 'Incredibles 2', 'The Fate of the Furious', 'Iron Man 3', 'Minions',
+                    'Captain America: Civil War', 'Aquaman', 'The Lord of the Rings: The Return of the King', 'Skyfall'],
+                datasets: [{
+                    label: 'Movie Titles',
+                    data: [2923, 2799, 2320, 2264, 2071, 2052, 1921, 1671, 1663, 1520, 1515, 1495, 1453, 1405, 1358, 1349, 1342, 1334, 1310,
+                        1286, 1284, 1266, 1243, 1236, 1215, 1159, 1155, 1148, 1147, 1142],
+                    backgroundColor: [
+                        'rgba(13,50,175,0.37)',
+                        'rgb(148,27,37)',
+                        'rgb(136,227,201)',
+                        'rgba(222,96,0,0.79)',
+                        'rgb(238,205,38)',
+                        'rgb(48,211,16)'
+                    ],
+                    hoverOffset: 1
+                }]
+            }
+        });
+
+    </script>
 </body>
 </html>
